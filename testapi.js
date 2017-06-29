@@ -1,6 +1,6 @@
 (function(w){"use strict";
 
-var host="http://localhost";
+var host="";
 var testapi=function(obj){
   var tbody=obj.parentElement.parentElement.parentElement;
   w.tbody=tbody;
