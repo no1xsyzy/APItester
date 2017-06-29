@@ -151,7 +151,7 @@
   </xsl:for-each>
 
   <xsl:for-each select="response">
-    <tr>
+    <tr class="response">
       <td rowspan="3" class="key">
         <xsl:attribute name="rowspan">
           <xsl:value-of select="boolean(headers/header)+2" />
