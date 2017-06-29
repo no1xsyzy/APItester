@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>shower</title>
+  <link rel="stylesheet" href="prism.css">
+  <script src="prism.js" data-manual></script>
+  <script src="xslt.js"></script>
+  <script src="testapi.js"></script>
+  <script type="text/javascript">
+  window.onload=function(){
+    var xslPath="default.xsl";
+    if(window.location.search.length > 1){
+      xslPath=window.location.search.substr(1);
+    }
+    doXSLT('API.xml',xslPath,document.body)
+    .then(()=>{
+      Prism.highlightAll()
+    })
+    .then(()=>{
+
+    });
+  }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</body>
+</html>

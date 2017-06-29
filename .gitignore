@@ -1,0 +1,4 @@
+*.docx
+.~lock*
+*.bmpr
+WMS.xml

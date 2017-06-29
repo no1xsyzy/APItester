@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<modules>
+  <module>
+    <id>module-login</id>
+    <name>登录模块</name>
+    <functions>
+      <function progress="TODO">
+        <id>function-login</id>
+        <summary>
+          <code>F001</code>
+          <name>网站登录</name>
+          <usage>登录系统</usage>
+          <operation>登录</operation>
+          <note>只提供用户登录功能</note>
+        </summary>
+        <api>
+          <name>系统登录API</name>
+          <method>GET</method>
+          <url>/user/login</url>
+          <params>
+            <param>
+              <key>username</key>
+              <optional>N</optional>
+              <description>登录用户名</description>
+              <example>admin</example>
+            </param>
+            <param>
+              <key>pwd</key>
+              <optional>N</optional>
+              <description>登录密码</description>
+              <example>123456@</example>
+            </param>
+          </params>
+          <response condition="success">
+            <description>登录成功</description>
+            <httpcode>200 OK</httpcode>
+            <headers>
+              <header>
+                <key>Content-Type</key>
+                <value>a</value>
+              </header>
+            </headers>
+            <httpbody type="json">{
+  "result":"OK",
+  "content":""
+}</httpbody>
+          </response>
+          <response condition="failed">
+            <description>登录失败</description>
+            <httpcode>404 Not Found</httpcode>
+            <headers></headers>
+            <httpbody type="json">{
+  "result":"Error",
+  "reason":"账号或密码不正确"
+}</httpbody>
+          </response>
+          <note>1</note>
+        </api>
+      </function>
+    </functions>
+  </module>
+</modules>

@@ -1,0 +1,33 @@
+body {
+  padding-left: 30px;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+table {
+  width:100%;
+  max-width: 800px;
+  min-width: 600px;
+}
+table td.key{
+  font-weight: bold;
+}
+.summary td{
+  width: 25%;
+}
+.summary td.width-3{
+  width: 75%;
+}
+
+.api td{
+  width: 20%;
+}
+.api td.width-4{
+  width: 80%;
+}
+.api td.width-3{
+  width: 60%;
+}
