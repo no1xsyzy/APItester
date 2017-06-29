@@ -1,4 +1,4 @@
-(function(w,d){//"use strict";
+(function(w){"use strict";
 
 var host="http://localhost";
 var testapi=function(obj){
@@ -27,7 +27,7 @@ var testapi=function(obj){
   .then(function(response){
     var statusLine=response.status+" "+response.statusText;
     var resHeaders="";
-    for([k,v] of response.headers){
+    for(let [k,v] of response.headers){
       resHeaders+=k+": "+v+"\n";
     }
     var resBody=response.text();
@@ -49,7 +49,7 @@ var testapi=function(obj){
       '`': '&#x60;',
       '=': '&#x3D;'
     };
-    newHTML=
+    let newHTML=
     '<tr class="response tester">\
       <td rowspan="3" class="key">\u54cd\u5e94\u6d4b\u8bd5</td>\
       <td class="key">HTTP\u54cd\u5e94\u72b6\u6001\u7801</td>\
@@ -88,4 +88,4 @@ testapi.config.setHost=function(newHost){
 
 w.testapi=testapi;
 
-})(window,document);
+})(window);
